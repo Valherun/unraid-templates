@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>tested1</Name>
+  <Name>tested</Name>
   <Repository>valherun/tested</Repository>
   <Registry>https://hub.docker.com/r/valherun/tested/</Registry>
   <Network>bridge</Network>
