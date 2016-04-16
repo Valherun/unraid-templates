@@ -1,31 +1,30 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>tested-transcoder</Name>
+  <Name>tested1</Name>
   <Repository>valherun/tested</Repository>
   <Registry>https://hub.docker.com/r/valherun/tested/</Registry>
-  <GitHub>https://github.com/valherun/tested</GitHub>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Support/>
-  <Overview/>
+  <Overview>Tested-Transcoder on UnRaid.. likely still broken</Overview>
   <Category>MediaApp:Other Status:Beta</Category>
   <WebUI/>
   <Icon/>
   <ExtraParams/>
-  <Description/>
+  <Description>Tested-Transcoder on UnRaid.. likely still broken</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish/>
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/tested-transcoder</HostDir>
-      <ContainerDir>/config</ContainerDir>
+      <HostDir>/mnt/user/Archive/transcoder/</HostDir>
+      <ContainerDir>/media/transcoder</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/Archive/transcoder/</HostDir>
-      <ContainerDir>/media/transcoder</ContainerDir>
+      <HostDir>/mnt/user/appdata/tested-transcoder/</HostDir>
+      <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
@@ -35,7 +34,7 @@
     </Volume>
   </Data>
   <Environment/>
-  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/tested-transcoder" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/tested-transcoder</Config>
-  <Config Name="transcoder" Target="/media/transcoder" Default="/mnt/user/Archive/transcoder" Mode="rw" Description="Container Path: /media/transcoder" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Archive/transcoder/</Config>
+  <Config Name="transcoder" Target="/media/transcoder" Default="" Mode="rw" Description="Container Path: /media/transcoder" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Archive/transcoder/</Config>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/tested-transcoder/" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/tested-transcoder/</Config>
   <Config Name="unRAID Share Path" Target="/unraid" Default="/mnt/user" Mode="rw" Description="Container Path: /unraid" Type="Path" Display="hidden" Required="false" Mask="false">/mnt/user</Config>
 </Container>
