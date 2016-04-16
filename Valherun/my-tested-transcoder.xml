@@ -4,6 +4,9 @@
   <Repository>valherun/tested</Repository>
   <Registry/>
   <Network>bridge</Network>
+   <Registry>https://registry.hub.docker.com/u/valherun/tested/</Registry>
+  <GitHub>https://github.com/valherun/tested</GitHub>
+  <Repository>valherun/tested</Repository>
   <Privileged>false</Privileged>
   <Support/>
   <Overview/>
