@@ -35,4 +35,7 @@
     </Volume>
   </Data>
   <Environment/>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/tested-transcoder" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/tested-transcoder</Config>
+  <Config Name="transcoder" Target="/media/transcoder" Default="/mnt/user/Archive/transcoder" Mode="rw" Description="Container Path: /media/transcoder" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Archive/transcoder/</Config>
+  <Config Name="unRAID Share Path" Target="/unraid" Default="/mnt/user" Mode="rw" Description="Container Path: /unraid" Type="Path" Display="hidden" Required="false" Mask="false">/mnt/user</Config>
 </Container>
