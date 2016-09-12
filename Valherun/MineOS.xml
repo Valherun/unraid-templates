@@ -1,0 +1,74 @@
+
+<Container version="2">
+<Name>MineOS</Name>
+<Repository>valherun/docker-mineos</Repository>
+<Registry>
+https://registry.hub.docker.com/u/valherun/docker-mineos
+</Registry>
+<Network>bridge</Network>
+<Privileged>false</Privileged>
+<Support/>
+<Overview>
+MineOS is an easy to manage Minecraft Server. It has its on web interface to manage all aspects of the server.[br][br]
+ [b][span style='color: #E80000;']Directions:[/span][/b][br]
+ [b]/var/games/minecraft[/b] : set this path to where you wish all the Minecraft Server items to be stored. Should be you app folder.[br][br]
+ [b][span style='color: #E80000;']IMPORTANT - Open Advanced View to Set your PASSWORD!!![/b][/span][br][br]
+</Overview>
+<Category>MediaServer:Other</Category>
+<WebUI>https://[IP]:[PORT:8443]</WebUI>
+<TemplateURL/>
+<Icon>http://i.imgur.com/P6RRtHH.png</Icon>
+<ExtraParams/>
+<DateInstalled>1473723958</DateInstalled>
+<Description>
+MineOS is an easy to manage Minecraft Server. It has its on web interface to manage all aspects of the server.[br][br]
+ [b][span style='color: #E80000;']Directions:[/span][/b][br]
+ [b]/var/games/minecraft[/b] : set this path to where you wish all the Minecraft Server items to be stored. Should be you app folder.[br][br]
+ [b][span style='color: #E80000;']IMPORTANT - Open Advanced View to Set your PASSWORD!!![/b][/span][br][br]
+</Description>
+<Networking>
+<Mode>bridge</Mode>
+<Publish>
+<Port>
+<HostPort>8443</HostPort>
+<ContainerPort>8443</ContainerPort>
+<Protocol>tcp</Protocol>
+</Port>
+<Port>
+<HostPort>25565</HostPort>
+<ContainerPort>25565</ContainerPort>
+<Protocol>tcp</Protocol>
+</Port>
+<Port>
+<HostPort>25570</HostPort>
+<ContainerPort>25570</ContainerPort>
+<Protocol>tcp</Protocol>
+</Port>
+</Publish>
+</Networking>
+<Data>
+<Volume>
+<HostDir>/mnt/cache/appdata/minecraftos/</HostDir>
+<ContainerDir>/var/games/minecraft</ContainerDir>
+<Mode>rw</Mode>
+</Volume>
+<Volume>
+<HostDir>/mnt/user</HostDir>
+<ContainerDir>/unraid</ContainerDir>
+<Mode>rw</Mode>
+</Volume>
+</Data>
+<Environment>
+<Variable>
+<Value></Value>
+<Name>PASSWORD</Name>
+<Mode/>
+</Variable>
+</Environment>
+<Config Name="Port 1" Target="8443" Default="8443" Mode="tcp" Description="Container Port: 8443" Type="Port" Display="always" Required="true" Mask="false">8443</Config>
+<Config Name="Port 2" Target="25565" Default="25565" Mode="tcp" Description="Container Port: 25565" Type="Port" Display="always" Required="true" Mask="false">25565</Config>
+<Config Name="Path 1" Target="/var/games/minecraft" Default="/mnt/appdata/minecraftos/" Mode="rw" Description="Container Path: /var/games/minecraft" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/minecraftos/</Config>
+<Config Name="Variable 1" Target="PASSWORD" Default="minecraft" Mode="" Description="Container Variable: PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">Milamber1126!</Config>
+<Config Name="unRAID Share Path" Target="/unraid" Default="/mnt/user" Mode="rw" Description="Container Path: /unraid" Type="Path" Display="hidden" Required="false" Mask="false">/mnt/user</Config>
+<Config Name="Container:Port 25570" Target="25570" Default="" Mode="tcp" Description="Container Port: 25570" Type="Port" Display="always" Required="false" Mask="false">25570</Config>
+</Container>
