@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>tested</Name>
-  <Repository>valherun/Transcoder</Repository>
+  <Repository>valherun/transcoder</Repository>
   <Registry>https://hub.docker.com/r/valherun/transcoder/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
@@ -19,12 +19,12 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/Archive/transcoder/</HostDir>
+      <HostDir></HostDir>
       <ContainerDir>/media/transcoder</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/Transcoder</HostDir>
+      <HostDir></HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
