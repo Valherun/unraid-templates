@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>tested</Name>
+  <Name>transcoder</Name>
   <Repository>valherun/transcoder</Repository>
   <Registry>https://hub.docker.com/r/valherun/transcoder/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Support/>
-  <Overview>Video Transcoder Adapted from Tested's Transcoder for Don Melton's new Ruby based </Overview>
+  <Overview>Video Transcoder Adapted from Tested's Transcoder for Don Melton's new Ruby based tools </Overview>
   <Category>MediaApp:Other Status:Beta</Category>
   <WebUI/>
   <TemplateURL/>
   <Icon/>
   <ExtraParams/>
-  <Description>Video Transcoder Adapted from Tested's Transcoder for Don Melton's new Ruby based </Description>
+  <Description>Video Transcoder Adapted from Tested's Transcoder for Don Melton's new Ruby based tools</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish/>
@@ -35,7 +35,7 @@
     </Volume>
   </Data>
   <Environment/>
-  <Config Name="transcoder" Target="/media/transcoder" Default="" Mode="rw" Description="Container Path: /media/transcoder" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Archive/transcoder/</Config>
+  <Config Name="transcoder" Target="/media/transcoder" Default="" Mode="rw" Description="Container Path: /media/transcoder" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="AppData Config Path" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="hidden" Required="true" Mask="false"></Config>
   <Config Name="unRAID Share Path" Target="/unraid" Default="/mnt/user" Mode="rw" Description="Container Path: /unraid" Type="Path" Display="hidden" Required="false" Mask="false">/mnt/user</Config>
 </Container>
