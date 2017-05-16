@@ -1,1 +1,80 @@
-
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>AMP-Minecraft</Name>
+  <Repository>https://github.com/Valherun/docker-cc-amp</Repository>
+  <Registry>https://hub.docker.com/r/valherun/docker-cc-amp/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Overview>Dockerfile for a container that installs and starts a Application Management Panel module from CubeCoders.com&#xD;
+&#xD;
+Installs the Application Management Panel from CubeCoders.&#xD;
+&#xD;
+This container requires a valid AMP license to run&#xD;
+&#xD;
+Forked: by Valherun&#xD;
+updated to openjdk 8&#xD;
+sets up for unraid (added template)&#xD;
+</Overview>
+  <Category>Other: Network:Other Status:Beta</Category>
+  <WebUI>http://[IP]:[PORT:8080]/web</WebUI>
+  <TemplateURL>https://github.com/Valherun/unraid-templates/blob/master/Valherun/docker-cc-amp</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/bjonness406/Docker-templates/master/Icon/AMP.png</Icon>
+  <ExtraParams/>
+  <DateInstalled>1494963051</DateInstalled>
+  <Description>Dockerfile for a container that installs and starts a Application Management Panel module from CubeCoders.com&#xD;
+&#xD;
+Installs the Application Management Panel from CubeCoders.&#xD;
+&#xD;
+This container requires a valid AMP license to run&#xD;
+&#xD;
+Forked: by Valherun&#xD;
+updated to openjdk 8&#xD;
+sets up for unraid (added template)&#xD;
+</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>25565</HostPort>
+        <ContainerPort/>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user</HostDir>
+      <ContainerDir>/unraid</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/AMP/ampdata</HostDir>
+      <ContainerDir>/ampdata</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>Your key here</Value>
+      <Name>LICENCE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>ADS</Value>
+      <Name>MODULE</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="unRAID Share Path" Target="/unraid" Default="/mnt/user" Mode="rw" Description="" Type="Path" Display="hidden" Required="false" Mask="false">/mnt/user</Config>
+  <Config Name="License key" Target="LICENCE" Default="Your key here" Mode="" Description="License key" Type="Variable" Display="always" Required="true" Mask="false">Your key here</Config>
+  <Config Name="Web UI port" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Server Port" Target="" Default="25565" Mode="tcp" Description="Container Port: 25565" Type="Port" Display="always" Required="true" Mask="false">25565</Config>
+  <Config Name="MODULE" Target="MODULE" Default="ADS" Mode="" Description="Module to load" Type="Variable" Display="always" Required="true" Mask="false">ADS</Config>
+  <Config Name="ampdata path" Target="/ampdata" Default="/mnt/user/appdata/AMP/ampdata" Mode="rw" Description="Container Path: /ampdata" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/AMP/ampdata</Config>
+</Container>
