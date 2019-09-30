@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ubuntu-transcoder</Name>
+  <Repository>valherun/ubuntu-transcoder</Repository>
+  <Registry>https://hub.docker.com/r/valherun/ubuntu-transcoder/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/donmelton/video_transcoding</Project>
+  <Overview>Video Transcoder Adapted from Tested's Transcoder for Don Melton's new Ruby based video-transcoding... Now with config file!</Overview>
+  <Category>MediaApp:Other Status:Beta</Category>
+  <WebUI/>
+  <TemplateURL>https://github.com/Valherun/unraid-templates/blob/master/Valherun/ubuntu-transcoder.xml</TemplateURL>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset>1,2,3,5,6,7</CPUset>
+  <DateInstalled>1569820487</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Video Transcoder Adapted from Tested's Transcoder for Don Melton's new Ruby based video-transcoding... Now with config file!</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/media/transcoder</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/ubuntu-transcoder</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="transcoder" Target="/media/transcoder" Default="" Mode="rw" Description="Container Path: /transcoder" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/tested" Mode="rw" Description="Container Path: /config" Type="Path" Display="hidden" Required="true" Mask="false">/mnt/user/appdata/ubuntu-transcoder</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="GID for permissions. Do not change unless you know what you're doing.&#13;&#10;" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="UID for permissions. Do not change unless you know what you're doing.&#13;&#10;" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+</Container>
